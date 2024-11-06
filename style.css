@@ -1,0 +1,133 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    overflow: hidden;
+}
+
+/* Container principal */
+.container {
+    min-width: 100vw;
+    text-align: center;
+    height: 100vh;
+    background: url('img/background.png') center/cover no-repeat;
+    padding-top: 5rem;
+}
+
+.logo {
+    width: 450px;
+    display: inline;
+}
+
+.subtext {
+    color: #ffffff;
+    padding-top: 2em;
+    font-size: 26px;
+}
+
+/* Botões */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-top: 3em;
+}
+
+.button img {
+    width: 230px;
+    /* Tamanho para mobile */
+    transition: transform 0.3s ease;
+}
+
+.button img:hover {
+    transform: scale(1.05);
+    /* Efeito hover nos botões */
+}
+
+/* Animação fadeIn */
+.fadeIn {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Breakpoints para resoluções maiores */
+@media (min-width: 768px) {
+
+    .logo {
+        width: 500px;
+        /* Aumenta o tamanho do logo */
+    }
+
+    .subtext {
+       font-size: 38px;
+    }
+
+    .button img {
+        width: 200px;
+        /* Aumenta o tamanho dos botões */
+    }
+
+    .buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 900px;
+        height: 100vh;
+    }
+
+    .logo {
+        width: 550px;
+    }
+
+    .subtext {
+        font-size: 42px;
+    }
+
+    .button img {
+        width: 300px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .logo {
+        width: 600px;
+    }
+
+    .subtext {
+        font-size: 46px;
+    }
+
+    .button img {
+        width: 380px;
+        padding-top: 1rem;
+    }
+}
