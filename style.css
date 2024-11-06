@@ -26,8 +26,12 @@ html {
 }
 
 .logo {
-    width: 450px;
-    display: inline;
+    width: 380px;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .subtext {
